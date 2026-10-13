@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <script>
+            function Add()
+            {
+                let f_n= document.getElementById("txt1").value;
+                let S_n= document.getElementByID("txt2").value ; 
+                let sum=f_n+S_n ; 
+                window.alert("Sum is :"+sum); 
+            }
+            function ds()
+            {
+                window.alert(document.getElementById("txt1"));
+            }
+        </script>
+        <style>
+            #bn{
+                width: 500px ;
+                height: 200px ;
+            }
+            #btn{
+                height: 30px;
+                width: 60px;
+                color: red;
+                font-size: 15px ;
+                border-radius: 20px ;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset id="bn">
+        
+       First No <input type="number" id="txt1" >
+       <br>
+    </br>
+       Second No<input type="number" id="txt2">
+        
+        <br>
+        <br>
+
+        <input type="button" value="Add"  id="btn1" name="btn"  onclick="ds()">
+        <input type="button" value="Subtract" >
+        <input type="button" value="Multiply" >
+        <input type="button" value="Division" >
+<br>
+<br>
+
+        <input type="button" id="btn" name="btn" value="Reset " onclick="popup()">
+    </fieldset>
+    </body>
+</html>

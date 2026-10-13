@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+
+    <style>
+        #bn {
+            width: 400px;
+            padding: 20px;
+        }
+
+        input[type="number"] {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        input[type="button"] {
+            margin: 5px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #result {
+            font-size: 20px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        function calculate(operation) {
+            let f_n = Number(document.getElementById("txt1").value);
+            let s_n = Number(document.getElementById("txt2").value);
+            let sum=f_n+s_n; 
+            window.alert("Sum is :"+ sum); 
+            /*let result;
+
+            if (operation === "add") {
+                result = f_n + s_n;
+            }
+            else if (operation === "subtract") {
+                result = f_n - s_n;
+            }
+            else if (operation === "multiply") {
+                result = f_n * s_n;
+            }
+            else if (operation === "divide") {
+                if (s_n === 0) {
+                    alert("Cannot divide by zero!");
+                    return;
+                }
+                result = f_n / s_n;
+            } */
+
+            document.getElementById("result").innerText =
+                "Result: " + result;
+        }
+
+        function resetCalc() {
+            document.getElementById("txt1").value = "";
+            document.getElementById("txt2").value = "";
+            document.getElementById("result").innerText = "";
+        }
+    </script>
+</head>
+
+<body>
+    <fieldset id="bn">
+        <legend>My Calculator</legend>
+
+        First No.
+        <input type="number" id="txt1">
+        <br>
+
+        Second No.
+        <input type="number" id="txt2">
+        <br><br>
+
+        <input type="button" value="Add"
+            onclick="calculate('add')">
+
+        <input type="button" value="Subtract"
+            onclick="calculate('subtract')">
+
+        <input type="button" value="Multiply"
+            onclick="calculate('multiply')">
+
+        <input type="button" value="Division"
+            onclick="calculate('divide')">
+
+        <br><br>
+
+        <p id="result"></p>
+
+        <input type="button" value="Reset"
+            onclick="resetCalc()">
+    </fieldset>
+</body>
+</html>
